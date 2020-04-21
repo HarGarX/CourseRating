@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+    <title>Course Rating</title>
+</head>
+<body>
+    
+    <ion-app>
+        <ion-content [scrollEvents]="true" (ionScrollStart)="logScrollStart()" (ionScroll)="logScrolling(event)" (ionScrollEnd)="logScrollEnd()">
+            <ion-header>
+                <ion-toolbar color="primary"> 
+                    <ion-title>Course Rating</ion-title> </ion-toolbar>
+            </ion-header>
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-item>
+                            <ion-label position="floating">Course Name</ion-label> 
+                            <ion-input type="text" id="courseName"></ion-input id="#courseName">
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Course Rating</ion-label> 
+                            <ion-input type="number" id="courseRating"></ion-input id="#courseName">
+                        </ion-item>
+                        <ion-button class="ion-margin" id="courseAddBtn" >
+                            <ion-icon slot="start" name="add" ></ion-icon>
+                            Add
+                        </ion-button>
+                    </ion-col>
+                  
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="courseList"></ion-list>
+                    </ion-col>
+
+                </ion-row>
+            </ion-grid>
+        <ion-alert-controller></ion-alert-controller>
+        <script src="app.js" >
+    
+    
+        
+        </script>
+        </ion-content>
+    </ion-app>
+    
+</body>
+</html>
